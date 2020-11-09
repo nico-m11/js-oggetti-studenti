@@ -20,6 +20,7 @@ nella pagina HTML quello che contiene studente;*/
 for(var chiave in studente) {
   txt += studente[chiave] + ', ';
   console.log(studente[chiave]);
+  //stampo in HTML
   document.getElementById('outputUno').innerHTML = txt;
 }
 
@@ -58,6 +59,32 @@ for(var i = 0; i < studenti.length; i++) {
 
   console.log(studenti[i].nome);
   console.log(studenti[i].cognome);
-
+//stampo in HTML
   document.getElementById('outputDue').innerHTML += studenti[i].nome + ', ' + studenti[i].cognome + '; <br>' ;
 }
+
+
+// Esercizio n°3;
+
+/*Dare la possibilità all’utente attraverso 3 prompt di aggiungere un nuovo oggetto studente
+inserendo nell’ordine: nome, cognome e età.*/
+
+// definisco l'oggetto, come variabile e array
+var student = [];
+var nuovoStudente = {
+  'nome': undefined,
+  'cognome': undefined,
+  'eta': undefined
+};
+
+
+// genero i prompt per far inserire i dati richiesti.
+
+nuovoStudente.nome = prompt('Inserisci il tuo nome:');
+nuovoStudente.cognome = prompt('Inserisci anche il tuo cognome:');
+nuovoStudente.eta = parseInt(prompt('Inserisci infine la tua età:'));
+
+console.log(nuovoStudente);
+student.push(nuovoStudente);
+//stampo in HTML
+document.getElementById('outputTre').innerHTML = nuovoStudente.nome + ', ' + nuovoStudente.cognome + ', ' + nuovoStudente.eta + ';';
