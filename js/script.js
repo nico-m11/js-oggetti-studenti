@@ -70,12 +70,7 @@ for(var i = 0; i < studenti.length; i++) {
 inserendo nell’ordine: nome, cognome e età.*/
 
 // definisco l'oggetto, come variabile e array
-var student = [];
-var nuovoStudente = {
-  'nome': undefined,
-  'cognome': undefined,
-  'eta': undefined
-};
+var nuovoStudente = {};
 
 
 // genero i prompt per far inserire i dati richiesti.
@@ -85,6 +80,6 @@ nuovoStudente.cognome = prompt('Inserisci anche il tuo cognome:');
 nuovoStudente.eta = parseInt(prompt('Inserisci infine la tua età:'));
 
 console.log(nuovoStudente);
-student.push(nuovoStudente);
+studenti.push(nuovoStudente);
 //stampo in HTML
 document.getElementById('outputTre').innerHTML = nuovoStudente.nome + ', ' + nuovoStudente.cognome + ', ' + nuovoStudente.eta + ';';
